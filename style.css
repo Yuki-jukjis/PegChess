@@ -1,0 +1,42 @@
+body {
+  background-color: #f0f0f0;
+}
+
+#board {
+  margin: auto;
+  border: 1px solid gray;
+}
+
+.cell {
+  width:100px;
+  height:100px;
+  position: relative;
+  border: 1px solid gray;
+}
+
+.cell.pawn1::after,
+.cell.pawn2::after {
+  display: block;
+  content: "";
+  top:10px;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  position: absolute;
+  border-radius: 40px;
+}
+
+.cell.pawn1::after {
+  background-color: #47aded;
+}
+.cell.pawn2::after {
+  background-color: #e0563a;
+}
+
+.cell.selected {
+  background-color: #bad1e0;
+}
+
+.cell.suggested {
+  background-color: #bad1e0;
+}
